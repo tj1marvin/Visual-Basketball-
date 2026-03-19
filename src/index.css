@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@layer utilities {
+  @keyframes node-pulse {
+    0% { stroke-width: 2px; stroke-opacity: 0.6; }
+    50% { stroke-width: 6px; stroke-opacity: 0.3; }
+    100% { stroke-width: 2px; stroke-opacity: 0.6; }
+  }
+
+  @keyframes shine {
+    0% { background-position: -200% -200%; }
+    100% { background-position: 200% 200%; }
+  }
+
+  .animate-shine {
+    animation: shine 10s linear infinite;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .animate-node-pulse {
+    animation: node-pulse 3s infinite ease-in-out;
+  }
+}
